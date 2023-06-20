@@ -2,6 +2,7 @@ theme = "hugo-tailwindcss-starter-theme"
 languageCode = "en-us"
 baseurl = "/"
 title = "Hugo Tailwindcss Starter"
+ignoreFiles = [ "\\.qmd$", "\\.ipynb$", "\\.py$" ]
 
 author = "Dirk Olbrich"
 copyright = "Copyright © 2019-2023, Dirk Olbrich, all rights reserved."
@@ -18,5 +19,10 @@ copyright = "Copyright © 2019-2023, Dirk Olbrich, all rights reserved."
 
 # syntax highlight settings
 [markup]
+  defaultMarkdownHandler = "goldmark"
   [markup.highlight]
+    # one of: https://xyproto.github.io/splash/docs/ 
     style = "dracula"
+  [markup.goldmark.renderer]
+    unsafe = true  # Enable user to embed HTML snippets in Markdown content.
+    hardwraps = false 
