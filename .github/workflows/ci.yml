@@ -16,6 +16,14 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+      
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+        
+    - name: Install dependencies
+      run: npm install
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2.6.0
@@ -23,7 +31,7 @@ jobs:
         hugo-version: latest
 
     - name: Build local ./exampleSite
-      run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://janraasch.github.io/hugo-bearblog/
+      run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL /
     
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
