@@ -37,7 +37,7 @@ jobs:
         node-version: '14'
         
     - name: Install Node.js dependencies
-      run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      run: npm install
 
     - name: Build the exampleSite
       run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://apreshill.github.io/hugo-tailwindcss-starter-theme
