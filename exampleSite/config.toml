@@ -1,6 +1,6 @@
 theme = "hugo-tailwindcss-starter-theme"
 languageCode = "en-us"
-baseurl = "http://example.com/"
+baseurl = "/"
 title = "Hugo Tailwindcss Starter"
 
 author = "Dirk Olbrich"
