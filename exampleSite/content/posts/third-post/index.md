@@ -5,7 +5,10 @@ date: "5/22/2021"
 format: 
   hugo-md:
     code-fold: true
+    toc: true
 ---
+
+-   [Air Quality](#air-quality)
 
 ## Air Quality
 
