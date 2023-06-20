@@ -48,7 +48,7 @@ jobs:
       run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL "${{ steps.pages.outputs.base_url }}/"
     
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-pages-artifact@v1
       with:
         name: build
         path: ./public
